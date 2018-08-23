@@ -16,4 +16,9 @@ public class TestController {
         return userScoreStatisticsService.search(900);
     }
 
+    @RequestMapping("/listPage")
+    public Object list(Integer pageIndex, Integer pageSize) {
+        return userScoreStatisticsService.searchByPage(pageIndex, pageSize);
+    }
+
 }
